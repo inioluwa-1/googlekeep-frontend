@@ -1,0 +1,276 @@
+.note-creator {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.creator-card {
+  width: 90%;
+  max-width: 600px;
+  background-color: #292a2d;
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.creator-card:hover {
+  border-color: #9aa0a6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.creator-card.expanded {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-color: #9aa0a6;
+}
+
+.creator-input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e8eaed;
+  font-size: 16px;
+  padding: 12px;
+  cursor: text;
+}
+
+.creator-input::placeholder {
+  color: #9aa0a6;
+}
+
+.creator-title {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e8eaed;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #5f6368;
+}
+
+.creator-title::placeholder {
+  color: #5f6368;
+}
+
+.creator-textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e8eaed;
+  font-size: 14px;
+  padding: 8px 0;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 12px;
+}
+
+.creator-textarea::placeholder {
+  color: #5f6368;
+}
+
+.creator-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #5f6368;
+}
+
+.creator-tools {
+  display: flex;
+  gap: 8px;
+}
+
+.creator-btn {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.creator-btn:hover {
+  background-color: #3c4043;
+  color: #e8eaed;
+}
+
+.creator-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.creator-close-btn,
+.creator-save-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.creator-close-btn {
+  background: none;
+  color: #9aa0a6;
+}
+
+.creator-close-btn:hover {
+  background-color: #3c4043;
+  color: #e8eaed;
+}
+
+.creator-save-btn {
+  background-color: #5f6368;
+  color: #fff;
+}
+
+.creator-save-btn:hover {
+  background-color: #6f7267;
+}
+
+/* Color Picker */
+.color-picker-container {
+  position: relative;
+}
+
+.color-picker-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #202124;
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 160px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 1px #5f6368;
+}
+
+.color-dot.selected {
+  border-color: #8ab4f8;
+  box-shadow: 0 0 0 2px #8ab4f8;
+}
+
+/* Labels */
+.creator-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.creator-label-tag {
+  background-color: #3c4043;
+  color: #e8eaed;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label-remove-btn {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.label-remove-btn:hover {
+  color: #e8eaed;
+}
+
+.creator-label-input {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.label-input {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #5f6368;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: #e8eaed;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.label-input:focus {
+  border-color: #8ab4f8;
+}
+
+.label-add-btn {
+  background: none;
+  border: 1px solid #5f6368;
+  border-radius: 4px;
+  color: #9aa0a6;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.label-add-btn:hover {
+  border-color: #8ab4f8;
+  color: #8ab4f8;
+}
+
+@media (max-width: 768px) {
+  .creator-card {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .creator-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .creator-title {
+    font-size: 16px;
+  }
+
+  .creator-textarea {
+    font-size: 13px;
+  }
+
+  .creator-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

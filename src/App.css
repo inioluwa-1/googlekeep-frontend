@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #e8eaed;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1f1f1f;
+}
+
+.app-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+.notes-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.error-message {
+  background-color: rgba(242, 132, 130, 0.15);
+  border: 1px solid #f28482;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #f28482;
+  font-size: 13px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #9aa0a6;
+  font-size: 14px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #202124;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5f6368;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .app-container {
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    height: 100vh;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Dark mode colors */
+html {
+  background-color: #1f1f1f;
+  color: #e8eaed;
+}
+
+/* Remove default input styles */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Button reset */
+button {
+  font-family: inherit;
+}
+
+/* Focus styles */
+button:focus,
+input:focus {
+  outline: none;
+}
+
+

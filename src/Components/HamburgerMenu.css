@@ -1,0 +1,137 @@
+.hamburger-menu {
+  display: none;
+  position: relative;
+}
+
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 101;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 3px;
+  background-color: #e8eaed;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover .hamburger-line {
+  background-color: #fff;
+}
+
+.hamburger-line.line1-active {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-line.line2-active {
+  opacity: 0;
+}
+
+.hamburger-line.line3-active {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.hamburger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.hamburger-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #202124;
+  border-right: 1px solid #5f6368;
+  animation: slideIn 0.3s ease;
+  padding-top: 60px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.hamburger-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #e8eaed;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.hamburger-close:hover {
+  background-color: #3c4043;
+}
+
+.hamburger-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-list li button {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  color: #e8eaed;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hamburger-list li button:hover {
+  background-color: #3c4043;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-brand .hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-content {
+    width: 100%;
+  }
+
+  .hamburger-btn {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 6px;
+  }
+}

@@ -1,0 +1,156 @@
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: none;
+  max-width: 400px;
+}
+
+.toast {
+  background-color: #202124;
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s ease-out;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.toast.toast-removing {
+  animation: slideOut 0.3s ease-out;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.toast-icon {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.toast-message {
+  color: #e8eaed;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  color: #e8eaed;
+}
+
+/* Toast Types */
+.toast-success {
+  border-color: #81c995;
+  background: linear-gradient(
+    to right,
+    rgba(129, 201, 149, 0.15),
+    rgba(129, 201, 149, 0.05)
+  );
+}
+
+.toast-success .toast-icon {
+  color: #81c995;
+}
+
+.toast-error {
+  border-color: #f28482;
+  background: linear-gradient(
+    to right,
+    rgba(242, 132, 130, 0.15),
+    rgba(242, 132, 130, 0.05)
+  );
+}
+
+.toast-error .toast-icon {
+  color: #f28482;
+}
+
+.toast-warning {
+  border-color: #fcc934;
+  background: linear-gradient(
+    to right,
+    rgba(252, 201, 52, 0.15),
+    rgba(252, 201, 52, 0.05)
+  );
+}
+
+.toast-warning .toast-icon {
+  color: #fcc934;
+}
+
+.toast-warning .toast-message {
+  color: #fcc934;
+}
+
+.toast-info {
+  border-color: #8ab4f8;
+  background: linear-gradient(
+    to right,
+    rgba(138, 180, 248, 0.15),
+    rgba(138, 180, 248, 0.05)
+  );
+}
+
+.toast-info .toast-icon {
+  color: #8ab4f8;
+}
+
+@media (max-width: 480px) {
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    max-width: none;
+  }
+
+  .toast {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
