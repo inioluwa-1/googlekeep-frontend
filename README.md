@@ -45,3 +45,4 @@ The application will be available at `http://localhost:5173`.
 
 ## Deployment
 This project is configured to be deployed on platforms like Vercel, Render, or Netlify. Make sure to set the `VITE_API_URL` environment variable in your deployment settings to point to your live backend URL (e.g., `https://your-backend.onrender.com/api`).
+this is the backend github link: https://github.com/inioluwa-1/googlekeep-backend
