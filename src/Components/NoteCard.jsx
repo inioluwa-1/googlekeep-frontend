@@ -1,5 +1,6 @@
 import React from 'react'
 import './NoteCard.css'
+import { Edit2, Trash2 } from 'lucide-react'
 
 const NoteCard = ({ note, onEdit, onDelete }) => {
   return (
@@ -21,10 +22,10 @@ const NoteCard = ({ note, onEdit, onDelete }) => {
       </div>
       <div className="note-actions">
         <button className="note-btn" onClick={() => onEdit(note)} title="Edit">
-          ✎
+          <Edit2 size={18} />
         </button>
         <button className="note-btn" onClick={() => onDelete(note._id)} title="Delete">
-          🗑️
+          <Trash2 size={18} />
         </button>
       </div>
     </div>
