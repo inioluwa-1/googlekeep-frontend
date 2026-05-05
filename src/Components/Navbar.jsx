@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import HamburgerMenu from './HamburgerMenu'
 import { useAuth } from '../context/AuthContext'
+import { Search, Settings, LogOut } from 'lucide-react'
 
 const Navbar = ({ onSearch, onMenuClick }) => {
   const { logout, user } = useAuth()
@@ -24,7 +25,7 @@ const Navbar = ({ onSearch, onMenuClick }) => {
         </div>
         
         <div className="navbar-search">
-          <span className="search-icon">🔍</span>
+          <Search className="search-icon" size={20} />
           <input 
             type="text" 
             placeholder="Search your notes..." 
@@ -39,13 +40,16 @@ const Navbar = ({ onSearch, onMenuClick }) => {
               <span className="user-name">{user.firstName} {user.lastName}</span>
             </div>
           )}
-          <button className="navbar-btn" title="Settings">⚙️</button>
+          <button className="navbar-btn" title="Settings">
+            <Settings size={20} />
+          </button>
           <button 
             className="navbar-btn logout-btn"
             onClick={handleLogout}
             title="Logout"
           >
-            🚪
+            <LogOut size={20} />
+            <span>Logout</span>
           </button>
         </div>
       </div>
